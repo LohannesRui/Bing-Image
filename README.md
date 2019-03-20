@@ -53,3 +53,5 @@ http://s.cn.bing.net 加 url信息就可以获取到图片。
 ## 运行代码
 
 将源代码打成jar文件之后运行：javaw -jar bingImage.jar
+
+D:\bing文件夹下有下载好的图片。
