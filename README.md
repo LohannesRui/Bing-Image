@@ -1,9 +1,17 @@
 # Bing-Image
-Bing每日壁纸下载
+必应每日壁纸下载
 
-## 获取Api
+## 运行代码
 
-必应壁纸Api：https://cn.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=zh-CN
+运行 bingImage.bat 文件，在当前目录自动生成 images 文件夹用于存放图片。
+
+## 设为壁纸
+
+windows 系统下，设置 --> 个性化 --> 背景 --> 为幻灯片选择相册。
+
+## 必应壁纸 API
+
+API 地址：https://cn.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=zh-CN
 
 |参数名称|值含义|
 | ---- | ---- |
@@ -50,8 +58,7 @@ Bing每日壁纸下载
 ```
 http://s.cn.bing.net 加 url信息就可以获取到图片。
 
-## 运行代码
+## 未完成的功能
 
-将源代码打成jar文件之后运行：javaw -jar bingImage.jar
-
-D:\bing文件夹下有下载好的图片。
+   - 自动设为桌面壁纸
+   - 打包成 exe 文件

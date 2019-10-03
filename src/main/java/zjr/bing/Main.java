@@ -10,7 +10,15 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String folder = "d:/bing/";
+
+        /*
+            System.getProperty("user.dir")：获取当前项目路径，例：D:\Projects\SoftwareProducts\Bing-Image
+
+            File.separator：获取当前系统目录的分隔符
+
+            例：D:\Projects\SoftwareProducts\Bing-Image\images\
+         */
+        String folder = System.getProperty("user.dir")+File.separator+"images"+File.separator;
         File file = new File(folder);
         if (!file.exists()) {
             file.mkdir();
