@@ -26,7 +26,12 @@ public class Main {
 
         Document document = XMLUtil.parse("https://cn.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1");
         ImageEntity imageEntity = XMLUtil.getImageEntity(document);
-        imageEntity.setImageFileAddress(folder + imageEntity.getImageName() + ".jpg");
+        String imageFileAddress = folder + imageEntity.getImageName() + ".jpg";
+        imageEntity.setImageFileAddress(imageFileAddress);
         HttpUtil.download(imageEntity);
+        File imagefile = new File(imageFileAddress);
+        if (imagefile.exists()) {
+            System.out.println("图片下载成功："+imageFileAddress);
+        }
     }
 }

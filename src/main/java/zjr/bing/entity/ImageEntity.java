@@ -13,11 +13,6 @@ public class ImageEntity {
     private String imageUrl;
 
     /**
-     * 图片介绍
-     */
-    private String imageCopyright;
-
-    /**
      * 图片存放地址
      */
     private String imageFileAddress;
@@ -39,14 +34,6 @@ public class ImageEntity {
         this.imageUrl = imageUrl;
     }
 
-    public String getImageCopyright() {
-        return imageCopyright;
-    }
-
-    public void setImageCopyright(String imageCopyright) {
-        this.imageCopyright = imageCopyright;
-    }
-
     public String getImageFileAddress() {
         return imageFileAddress;
     }
@@ -60,7 +47,6 @@ public class ImageEntity {
         return "ImageEntity{" +
                 "imageName='" + imageName + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", imageCopyright='" + imageCopyright + '\'' +
                 ", imageFileAddress='" + imageFileAddress + '\'' +
                 '}';
     }

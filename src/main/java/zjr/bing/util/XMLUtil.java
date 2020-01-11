@@ -30,8 +30,10 @@ public class XMLUtil {
         Node urlNode = document.selectSingleNode("/images/image/url");
         String url =urlNode.getText();
         Node copyrightNode = document.selectSingleNode("/images/image/copyright");
-        imageEntity.setImageCopyright(copyrightNode.getText());
-        imageEntity.setImageName(url.substring(11,url.indexOf(".jpg")));
+        //imageEntity.setImageCopyright(copyrightNode.getText());
+        String name = copyrightNode.getText().split(" ")[0];
+        imageEntity.setImageName(name);
+        // imageEntity.setImageName(url.substring(11,url.indexOf(".jpg")));
         imageEntity.setImageUrl("http://s.cn.bing.net"+url);
         return imageEntity;
     }
